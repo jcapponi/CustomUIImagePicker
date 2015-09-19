@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="CustomUIImagePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Nd-9P-K3j">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="504"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Asa-YX-MEb">
+                                <rect key="frame" x="16" y="535" width="50" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="NKD-rC-8Tx"/>
+                                    <constraint firstAttribute="height" constant="44" id="ofJ-9g-Se5"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="cameraRoll">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraRollAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="my1-UN-cXr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuV-zh-jTo">
+                                <rect key="frame" x="534" y="530" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6NR-aU-IH2"/>
+                                    <constraint firstAttribute="width" constant="50" id="9eT-tZ-uEv"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="camera"/>
+                                <connections>
+                                    <action selector="photoAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="E6U-Sn-y2U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Asa-YX-MEb" secondAttribute="bottom" constant="21" id="0pA-hq-4RY"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="GuV-zh-jTo" secondAttribute="bottom" constant="20" id="1TO-oZ-k9E"/>
+                            <constraint firstItem="Asa-YX-MEb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-4" id="Gpq-We-ZnN"/>
+                            <constraint firstItem="GuV-zh-jTo" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" constant="4" id="NEq-w5-9YD"/>
+                            <constraint firstItem="9Nd-9P-K3j" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="Tlb-t4-0Qr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Nd-9P-K3j" secondAttribute="trailing" constant="-20" id="XpV-XP-Ayz"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="9Nd-9P-K3j" secondAttribute="bottom" constant="96" id="biN-Ax-pNg"/>
+                            <constraint firstItem="9Nd-9P-K3j" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="m11-FF-VmB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="9Nd-9P-K3j" id="7Y3-2n-Kgs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="408" y="192"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" width="512" height="512"/>
+        <image name="cameraRoll" width="134" height="134"/>
+    </resources>
+</document>
